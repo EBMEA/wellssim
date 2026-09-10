@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WellsSim</title>
+  <meta name="description" content="WellsSim — a short description of your site goes here.">
+
+  <!-- Social preview (shows when the link is shared) -->
+  <meta property="og:title" content="WellsSim">
+  <meta property="og:description" content="WellsSim — a short description of your site goes here.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9883;</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="/">WellsSim</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a class="btn btn-sm" href="#contact">Get in touch</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Now live</p>
+      <h1>A headline that says<br>what you actually do.</h1>
+      <p class="lede">
+        Replace this paragraph with one or two sentences explaining who this is for
+        and why they should care. Keep it short — people skim.
+      </p>
+      <div class="cta-row">
+        <a class="btn" href="#contact">Get started</a>
+        <a class="btn btn-ghost" href="#features">Learn more</a>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>What you get</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>First thing</h3>
+          <p>A sentence about the first benefit. Concrete beats clever.</p>
+        </article>
+        <article class="card">
+          <h3>Second thing</h3>
+          <p>A sentence about the second benefit.</p>
+        </article>
+        <article class="card">
+          <h3>Third thing</h3>
+          <p>A sentence about the third benefit.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="prose">
+      <h2>About</h2>
+      <p>
+        A paragraph of background. Who built this, why it exists, what problem it solves.
+        This is where you earn trust.
+      </p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get in touch</h2>
+      <p>The fastest way to reach us.</p>
+      <a class="btn" href="mailto:hello@example.com">hello@example.com</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> WellsSim. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

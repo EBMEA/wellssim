@@ -1,0 +1,118 @@
+/* ---- Design tokens ------------------------------------------------ */
+:root {
+  --bg:        #ffffff;
+  --bg-soft:   #f6f7f9;
+  --text:      #16181d;
+  --text-mute: #5c6270;
+  --border:    #e3e6ea;
+  --accent:    #2f6df6;
+  --accent-fg: #ffffff;
+  --radius:    12px;
+  --maxw:      1080px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:        #0e1014;
+    --bg-soft:   #16191f;
+    --text:      #e9ecf1;
+    --text-mute: #99a1b0;
+    --border:    #262b34;
+    --accent:    #5b8cff;
+    --accent-fg: #0e1014;
+  }
+}
+
+/* ---- Base --------------------------------------------------------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 .5em; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.125rem; }
+p  { margin: 0 0 1rem; }
+
+a { color: inherit; }
+
+section { max-width: var(--maxw); margin: 0 auto; padding: 5rem 1.5rem; }
+
+/* ---- Header ------------------------------------------------------- */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 1rem 1.5rem;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(8px);
+}
+.brand { font-weight: 700; text-decoration: none; letter-spacing: -0.02em; }
+.site-header nav { display: flex; align-items: center; gap: 1.25rem; }
+.site-header nav a { color: var(--text-mute); text-decoration: none; font-size: .9375rem; }
+.site-header nav a:hover { color: var(--text); }
+
+/* ---- Buttons ------------------------------------------------------ */
+.btn {
+  display: inline-block;
+  padding: .7rem 1.25rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-weight: 600; font-size: .9375rem;
+  text-decoration: none;
+  transition: opacity .15s ease, transform .15s ease;
+}
+.btn:hover { opacity: .9; transform: translateY(-1px); }
+.btn-sm    { padding: .45rem .85rem; font-size: .875rem; }
+.btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+
+/* ---- Hero --------------------------------------------------------- */
+.hero { padding-top: 4rem; padding-bottom: 6rem; }
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem; padding: .25rem .7rem;
+  border: 1px solid var(--border); border-radius: 999px;
+  color: var(--text-mute); font-size: .8125rem; font-weight: 500;
+}
+.lede { max-width: 34rem; font-size: 1.125rem; color: var(--text-mute); }
+.cta-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+
+/* ---- Features ----------------------------------------------------- */
+.features { background: var(--bg-soft); max-width: none; }
+.features > * { max-width: var(--maxw); margin-inline: auto; }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.card {
+  padding: 1.5rem;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg);
+}
+.card p { margin: 0; color: var(--text-mute); font-size: .9375rem; }
+
+/* ---- Prose / contact ---------------------------------------------- */
+.prose p { max-width: 38rem; color: var(--text-mute); }
+.contact { text-align: center; }
+.contact p { color: var(--text-mute); }
+
+/* ---- Footer ------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.site-footer p { margin: 0; color: var(--text-mute); font-size: .875rem; }
+
+/* ---- Small screens ------------------------------------------------ */
+@media (max-width: 560px) {
+  .site-header nav a:not(.btn) { display: none; }
+  section { padding: 3.5rem 1.25rem; }
+}

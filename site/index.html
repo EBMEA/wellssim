@@ -22,7 +22,7 @@
     <nav>
       <a href="#capabilities">Capabilities</a>
       <a href="#about">About</a>
-      <a class="btn btn-sm" href="#contact">Request a demo</a>
+      <a class="btn btn-sm" href="#download">Download</a>
     </nav>
   </header>
 
@@ -36,9 +36,10 @@
         rates before committing capital.
       </p>
       <div class="cta-row">
-        <a class="btn" href="#contact">Request a demo</a>
+        <a class="btn" href="#download">Download WellSim 2.7</a>
         <a class="btn btn-ghost" href="#capabilities">See capabilities</a>
       </div>
+      <p class="hero-note">Portable, Windows, 34.7&nbsp;MB. No installation and no network required.</p>
     </section>
 
     <section id="capabilities" class="features">
@@ -86,6 +87,63 @@
             straight to a partner or an approval committee.
           </p>
         </article>
+      </div>
+    </section>
+
+    <section id="download" class="download">
+      <h2>Download</h2>
+
+      <div class="dl-panel">
+        <div class="dl-head">
+          <div>
+            <h3>WellSim 2.7 <span class="tag">portable</span></h3>
+            <p class="dl-meta">Windows &middot; 34.7&nbsp;MB &middot; released 9 September 2026 &middot; build <code>8423d73</code></p>
+          </div>
+          <a class="btn" href="https://github.com/EBMEA/wellssim/releases/download/v2.7/WellSim-2.7-distribution.zip">
+            Download&nbsp;.zip
+          </a>
+        </div>
+
+        <p class="dl-body">
+          Extracts to a <code>WellSim-2.7\</code> folder holding the program, the signing
+          certificate, the manual and the build record. Double-click <code>WellSim.exe</code> —
+          there is no installer. It serves itself on the first free port from 3355 and opens
+          in your browser. Keep it somewhere writable, not in <code>Program&nbsp;Files</code>,
+          because cases are saved beside it.
+        </p>
+
+        <div class="dl-hash">
+          <span class="dl-hash-label">SHA256</span>
+          <code>C13AB2E76EED4199E1FB4EC014D4719D433002DE0A6402B0DED95C1666E8F99B</code>
+        </div>
+        <p class="dl-verify">
+          Verify with <code>Get-FileHash .\WellSim-2.7-distribution.zip -Algorithm SHA256</code>.
+          Signed <code>CN=M.&nbsp;El-Ashry</code>, timestamped, thumbprint
+          <code>78974137A5BE991462A896EBF7FB25F17DC6FDC6</code>.
+        </p>
+
+        <details class="dl-note">
+          <summary>Windows will show two warnings — here is why</summary>
+          <p>
+            The certificate is self-signed rather than issued by a commercial authority.
+            Until you install the included <code>.cer</code>, Windows reports that the
+            signature <em>&ldquo;terminated in a root certificate which is not trusted&rdquo;</em>.
+            That is the trust store talking, not a problem with the file — and the SHA256
+            above does not depend on it.
+          </p>
+          <p>
+            SmartScreen warns either way, for the same reason. To have Windows report the
+            signature as fully trusted: double-click the <code>.cer</code> &rarr; Install
+            Certificate &rarr; Local Machine &rarr; Place all certificates in the following
+            store &rarr; Trusted Root Certification Authorities.
+          </p>
+        </details>
+
+        <p class="dl-links">
+          <a href="https://github.com/EBMEA/wellssim/releases/tag/v2.7">Release notes and checksums</a>
+          &middot;
+          <a href="https://github.com/EBMEA/wellssim/releases/download/v2.7/WellSim-2.7-distribution.sha256.txt">Build record</a>
+        </p>
       </div>
     </section>
 

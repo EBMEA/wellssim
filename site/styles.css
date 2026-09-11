@@ -184,3 +184,62 @@ code {
   .dl-panel { padding: 1.25rem; }
   .dl-head .btn { width: 100%; text-align: center; }
 }
+
+/* ---- Decorative chart motifs -------------------------------------- */
+/* These carry no data. They are the shapes of the methods, drawn thin
+   and recessive, with no values on them. Colour comes from currentColor
+   so both themes derive from the same tokens. */
+
+.hero { position: relative; overflow: hidden; }
+.hero > *:not(.hero-bg) { position: relative; z-index: 1; }
+
+.hero-bg {
+  position: absolute;
+  top: 50%; right: -2%;
+  transform: translateY(-50%);
+  width: min(48%, 540px);
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hero-bg .hb-grid    { stroke: var(--text-mute); stroke-width: 1; opacity: .16; }
+.hero-bg .hb-ipr     { stroke: currentColor; stroke-width: 2.5; opacity: .40; }
+.hero-bg .hb-tpr     { stroke: currentColor; stroke-width: 2.5; opacity: .26; }
+.hero-bg .hb-drop    { stroke: currentColor; stroke-width: 1.5; opacity: .22; stroke-dasharray: 3 5; }
+.hero-bg .hb-op circle { fill: currentColor; opacity: .38; }
+
+/* The hero text must win. Below the breakpoint the motif would sit
+   under the paragraph, so it goes away entirely rather than fight it. */
+@media (max-width: 860px) {
+  .hero-bg { display: none; }
+}
+
+.card-chart {
+  display: block;
+  width: 100%; height: 46px;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+.card-chart .cc-axis  { stroke: var(--text-mute); stroke-width: 1.25; opacity: .35; }
+.card-chart .cc-a     { stroke: currentColor; stroke-width: 2; opacity: .9; }
+.card-chart .cc-b     { stroke: currentColor; stroke-width: 2; opacity: .45; }
+.card-chart .cc-muted { stroke: var(--text-mute); stroke-width: 1.5; opacity: .3; }
+.card-chart .cc-dash  { stroke: currentColor; stroke-width: 2; opacity: .45; stroke-dasharray: 4 4; }
+.card-chart .cc-tick  { stroke: var(--text-mute); stroke-width: 1.25; opacity: .3; }
+.card-chart .cc-dot   { fill: currentColor; }
+.card-chart .cc-pt circle { fill: currentColor; opacity: .55; }
+.card-chart .cc-bar rect  { fill: currentColor; opacity: .55; }
+.card-chart .cc-fill  { fill: currentColor; opacity: .07; stroke: none; }
+
+/* Forced-colours (Windows high contrast): decoration should not survive
+   as mystery shapes competing with the text. */
+@media (forced-colors: active) {
+  .hero-bg { display: none; }
+  .card-chart { opacity: .4; }
+}

@@ -181,31 +181,52 @@
       <div class="dl-panel">
         <div class="dl-head">
           <div>
-            <h3>WellSim 2.7 <span class="tag">portable</span></h3>
-            <p class="dl-meta">Windows &middot; 34.7&nbsp;MB &middot; released 9 September 2026 &middot; build <code>8423d73</code></p>
+            <h3>WellSim 2.8 <span class="tag">portable</span></h3>
+            <p class="dl-meta">Windows &middot; 34.70&nbsp;MB &middot; released 12 September 2026 &middot; build <code>768d4d1</code></p>
           </div>
-          <a class="btn" href="https://github.com/EBMEA/wellssim/releases/download/v2.7/WellSim-2.7-distribution.zip">
+          <a class="btn" href="https://github.com/EBMEA/wellssim/releases/download/v2.8/WellSim-2.8-distribution.zip">
             Download&nbsp;.zip
           </a>
         </div>
 
         <p class="dl-body">
-          Extracts to a <code>WellSim-2.7\</code> folder holding the program, the signing
-          certificate, the manual and the build record. Double-click <code>WellSim.exe</code> —
-          there is no installer. It serves itself on the first free port from 3355 and opens
-          in your browser. Keep it somewhere writable, not in <code>Program&nbsp;Files</code>,
-          because cases are saved beside it.
+          Unpacks to a single <code>WellSim-2.8\</code> folder holding the program, the
+          signing certificate and the manual. Unzip it anywhere — a USB stick is fine;
+          nothing is installed and nothing is written outside the folder. Double-click
+          <code>WellSim.exe</code>: a console window opens and the app appears at
+          <code>localhost:3355</code> in your browser. <strong>Closing that console window
+          stops WellSim.</strong> Cases are saved as ordinary JSON in a <code>cases\</code>
+          folder beside the exe, so keep it somewhere writable — not in
+          <code>Program&nbsp;Files</code>.
         </p>
 
         <div class="dl-hash">
           <span class="dl-hash-label">SHA256</span>
-          <code>C13AB2E76EED4199E1FB4EC014D4719D433002DE0A6402B0DED95C1666E8F99B</code>
+          <code>7C1C0E80D4F898E1278F3E6831158B566F6130172B8F782E8D97A8DCB89EB2F5</code>
         </div>
         <p class="dl-verify">
-          Verify with <code>Get-FileHash .\WellSim-2.7-distribution.zip -Algorithm SHA256</code>.
+          Verify with <code>Get-FileHash .\WellSim-2.8-distribution.zip -Algorithm SHA256</code>.
           Signed <code>CN=M.&nbsp;El-Ashry</code>, timestamped, thumbprint
           <code>78974137A5BE991462A896EBF7FB25F17DC6FDC6</code>.
         </p>
+
+        <details class="dl-note">
+          <summary>What changed in 2.8</summary>
+          <p>
+            The PostgreSQL boundary is gone — the server now has no runtime dependencies
+            at all. The export contract was reimplemented from a written specification,
+            with its formula-injection defence explicitly tested: a cell beginning
+            <code>=</code>, <code>+</code>, <code>-</code> or <code>@</code> is neutralised
+            so a spreadsheet cannot execute it on open, while a negative number stays a
+            number rather than being mangled into text.
+          </p>
+          <p>
+            Nine MARCH defaults that were never the analyst's to set are now fixed rather
+            than editable, and lift-gas SG appears only when the water well is actually gas
+            lifted. The manual and the interface differ from 2.7; the physics does not —
+            every verified answer matches.
+          </p>
+        </details>
 
         <details class="dl-note">
           <summary>Windows will show two warnings — here is why</summary>
@@ -230,9 +251,9 @@
         </p>
 
         <p class="dl-links">
-          <a href="https://github.com/EBMEA/wellssim/releases/tag/v2.7">Release notes and checksums</a>
+          <a href="https://github.com/EBMEA/wellssim/releases/tag/v2.8">Release notes and checksums</a>
           &middot;
-          <a href="https://github.com/EBMEA/wellssim/releases/download/v2.7/WellSim-2.7-distribution.sha256.txt">Build record</a>
+          <a href="https://github.com/EBMEA/wellssim/releases/download/v2.8/WellSim-2.8-distribution.sha256.txt">Build record</a>
         </p>
       </div>
     </section>

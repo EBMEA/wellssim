@@ -41,8 +41,10 @@
         <!-- tubing: high at low rate, minimum, then rising -->
         <path class="hb-tpr" d="M64 118C104 170 140 190 180 189C240 187 300 140 352 88"/>
         <g class="hb-op">
-          <path d="M243 160V260M60 160H243" class="hb-drop"/>
-          <circle cx="243" cy="160" r="6"/>
+          <!-- Operating point: the computed intersection of hb-ipr and hb-tpr,
+               not an eyeballed position. Recompute if either path changes. -->
+          <path d="M258 164V260M60 164H258" class="hb-drop"/>
+          <circle cx="258" cy="164" r="6"/>
         </g>
       </svg>
 
@@ -68,7 +70,7 @@
             <path class="cc-axis" d="M10 4v40h140"/>
             <path class="cc-a" d="M12 10c34 8 58 20 78 30"/>
             <path class="cc-b" d="M12 22c18 16 34 20 56 17s58-18 82-32"/>
-            <circle class="cc-dot" cx="79" cy="27" r="3.5"/>
+            <circle class="cc-dot" cx="82" cy="36" r="3.5"/>
           </svg>
           <h3>Nodal analysis</h3>
           <p>

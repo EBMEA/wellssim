@@ -243,3 +243,30 @@ code {
   .hero-bg { display: none; }
   .card-chart { opacity: .4; }
 }
+
+/* ---- External links ----------------------------------------------- */
+/* Visually hidden, but read aloud - the arrow alone does not tell a
+   screen-reader user the link leaves the page. */
+.vh {
+  position: absolute; width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip-path: inset(50%); overflow: hidden; white-space: nowrap;
+}
+
+.ext-mark {
+  display: inline-block;
+  margin-left: .3em;
+  font-size: .85em;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+a.ext { color: var(--accent); text-decoration: none; }
+a.ext:hover { text-decoration: underline; }
+
+.dl-alt {
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-mute); font-size: .9375rem;
+}

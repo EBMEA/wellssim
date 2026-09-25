@@ -181,16 +181,16 @@
       <div class="dl-panel">
         <div class="dl-head">
           <div>
-            <h3>WellSim 2.9 <span class="tag">portable</span></h3>
-            <p class="dl-meta">Windows &middot; 34.71&nbsp;MB &middot; released 13 September 2026 &middot; build <code>c7fb645</code></p>
+            <h3>WellSim 3.0 <span class="tag">portable</span></h3>
+            <p class="dl-meta">Windows &middot; 34.71&nbsp;MB &middot; released 25 September 2026 &middot; build <code>f28fc23</code></p>
           </div>
-          <a class="btn" href="https://github.com/EBMEA/wellssim/releases/download/v2.9/WellSim-2.9-distribution.zip">
+          <a class="btn" href="https://github.com/EBMEA/wellssim/releases/download/v3.0/WellSim-3.0-distribution.zip">
             Download&nbsp;.zip
           </a>
         </div>
 
         <p class="dl-body">
-          Unpacks to a single <code>WellSim-2.9\</code> folder holding the program, the
+          Unpacks to a single <code>WellSim-3.0\</code> folder holding the program, the
           signing certificate and the manual. Unzip it anywhere — a USB stick is fine;
           nothing is installed and nothing is written outside the folder. Double-click
           <code>WellSim.exe</code>: a console window opens and the app appears at
@@ -202,26 +202,29 @@
 
         <div class="dl-hash">
           <span class="dl-hash-label">SHA256</span>
-          <code>18FA3C561AE36E751A33271F56C92E3EB4E6575E32C167F2A24F1956A1B7C87A</code>
+          <code>2725E0152F75C7716359D449E8C606A64CC577A3F5297AC541CDA1F51F50F75A</code>
         </div>
         <p class="dl-verify">
-          Verify with <code>Get-FileHash .\WellSim-2.9-distribution.zip -Algorithm SHA256</code>.
+          Verify with <code>Get-FileHash .\WellSim-3.0-distribution.zip -Algorithm SHA256</code>.
           Signed <code>CN=M.&nbsp;El-Ashry</code>, timestamped, thumbprint
           <code>78974137A5BE991462A896EBF7FB25F17DC6FDC6</code>.
         </p>
 
         <details class="dl-note">
-          <summary>What changed in 2.9</summary>
+          <summary>What changed in 3.0</summary>
           <p>
-            This is the first portable carrying the water-well work. On the water tab,
-            FTHP now keeps its psi unit, the ESP test-rate default follows the lift
-            method, and measured <em>P</em><sub>int</sub> and <em>P</em><sub>dis</sub> are
-            inputs on the ESP block. The ESP match buttons are visible — they never were
-            before, so nobody had been able to use them.
+            On the gas reserve tab, each production row can now be set to <em>User</em>
+            and given a measured <em>P</em><sub>wf</sub> and <em>P</em><sub>r</sub> — a
+            build-up gauge reading on that date — instead of the model's own.
           </p>
           <p>
-            No physics changed. Every solved answer matches 2.8 exactly, and anyone who
-            does not use the water ESP module will see no difference at all.
+            Every data table now scrolls sideways inside its own box on any window
+            narrower than the table, and on a phone the Run button no longer floats over
+            the rows.
+          </p>
+          <p>
+            No physics changed. Every solved answer matches 2.9 exactly, and anyone who
+            does not use the gas reserve module on a narrow screen will see no difference.
           </p>
         </details>
 
@@ -248,9 +251,9 @@
         </p>
 
         <p class="dl-links">
-          <a href="https://github.com/EBMEA/wellssim/releases/tag/v2.9">Release notes and checksums</a>
+          <a href="https://github.com/EBMEA/wellssim/releases/tag/v3.0">Release notes and checksums</a>
           &middot;
-          <a href="https://github.com/EBMEA/wellssim/releases/download/v2.9/WellSim-2.9-distribution.sha256.txt">Build record</a>
+          <a href="https://github.com/EBMEA/wellssim/releases/download/v3.0/WellSim-3.0-distribution.sha256.txt">Build record</a>
         </p>
       </div>
     </section>

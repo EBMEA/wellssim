@@ -181,16 +181,16 @@
       <div class="dl-panel">
         <div class="dl-head">
           <div>
-            <h3>WellSim 3.0 <span class="tag">portable</span></h3>
-            <p class="dl-meta">Windows &middot; 34.71&nbsp;MB &middot; released 25 September 2026 &middot; build <code>f28fc23</code></p>
+            <h3>WellSim 3.1 <span class="tag">portable</span></h3>
+            <p class="dl-meta">Windows &middot; 34.67&nbsp;MB &middot; released 30 September 2026 &middot; build <code>952f14f</code></p>
           </div>
-          <a class="btn" href="https://github.com/EBMEA/wellssim/releases/download/v3.0/WellSim-3.0-distribution.zip">
+          <a class="btn" href="https://github.com/EBMEA/wellssim/releases/download/v3.1/WellSim-3.1-distribution.zip">
             Download&nbsp;.zip
           </a>
         </div>
 
         <p class="dl-body">
-          Unpacks to a single <code>WellSim-3.0\</code> folder holding the program, the
+          Unpacks to a single <code>WellSim-3.1\</code> folder holding the program, the
           signing certificate and the manual. Unzip it anywhere — a USB stick is fine;
           nothing is installed and nothing is written outside the folder. Double-click
           <code>WellSim.exe</code>: a console window opens and the app appears at
@@ -202,29 +202,30 @@
 
         <div class="dl-hash">
           <span class="dl-hash-label">SHA256</span>
-          <code>2725E0152F75C7716359D449E8C606A64CC577A3F5297AC541CDA1F51F50F75A</code>
+          <code>131F1AA3D30CF6517F694DACFAACAB8EBC42847E8A042F1E3023A0B534A64B52</code>
         </div>
         <p class="dl-verify">
-          Verify with <code>Get-FileHash .\WellSim-3.0-distribution.zip -Algorithm SHA256</code>.
+          Verify with <code>Get-FileHash .\WellSim-3.1-distribution.zip -Algorithm SHA256</code>.
           Signed <code>CN=M.&nbsp;El-Ashry</code>, timestamped, thumbprint
           <code>78974137A5BE991462A896EBF7FB25F17DC6FDC6</code>.
         </p>
 
         <details class="dl-note">
-          <summary>What changed in 3.0</summary>
+          <summary>What changed in 3.1</summary>
           <p>
-            On the gas reserve tab, each production row can now be set to <em>User</em>
-            and given a measured <em>P</em><sub>wf</sub> and <em>P</em><sub>r</sub> — a
-            build-up gauge reading on that date — instead of the model's own.
+            The executable now wears the WellSim icon — the same mark as this site — in
+            Explorer, on the taskbar and in the Save dialog, instead of the Node.js
+            hexagon it had been showing.
           </p>
           <p>
-            Every data table now scrolls sideways inside its own box on any window
-            narrower than the table, and on a phone the Run button no longer floats over
-            the rows.
+            Inside, the gas surveys gain a SITHT column; multi-layer zones can be named
+            and switched on and off, with every well-model calculation honouring them;
+            check boxes survive Save and Open; and the ESP wear match now explains itself
+            plainly when it meets a gas-locked pump rather than leaving you to work out
+            why it failed.
           </p>
           <p>
-            No physics changed. Every solved answer matches 2.9 exactly, and anyone who
-            does not use the gas reserve module on a narrow screen will see no difference.
+            No physics changed. Every answer 3.0 gave, 3.1 gives the same way.
           </p>
         </details>
 
@@ -251,9 +252,9 @@
         </p>
 
         <p class="dl-links">
-          <a href="https://github.com/EBMEA/wellssim/releases/tag/v3.0">Release notes and checksums</a>
+          <a href="https://github.com/EBMEA/wellssim/releases/tag/v3.1">Release notes and checksums</a>
           &middot;
-          <a href="https://github.com/EBMEA/wellssim/releases/download/v3.0/WellSim-3.0-distribution.sha256.txt">Build record</a>
+          <a href="https://github.com/EBMEA/wellssim/releases/download/v3.1/WellSim-3.1-distribution.sha256.txt">Build record</a>
         </p>
       </div>
     </section>
